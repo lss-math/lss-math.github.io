@@ -1,0 +1,1085 @@
+@font-face
+{
+    font-family: "Computer Modern";
+    src: url("assets/cm-roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern";
+    src: url("assets/cm-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern";
+    src: url("assets/cm-italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: "Computer Modern";
+    src: url("assets/cm-bold-oblique.ttf") format("truetype");
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Sans";
+    src: url("assets/cm-ss.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Sans";
+    src: url("assets/cm-ss-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Sans";
+    src: url("assets/cm-ss-oblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Bright";
+    src: url("assets/cm-bright.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Bright";
+    src: url("assets/cm-bright-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Bright";
+    src: url("assets/cm-bright-oblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Mono";
+    src: url("assets/cm-mono.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Mono";
+    src: url("assets/cm-mono-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Mono";
+    src: url("assets/cm-mono-italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Mono";
+    src: url("assets/cm-mono-bold-italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: "Computer Modern CJK";
+    src: url("assets/noto.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Computer Modern Sans CJK";
+    src: url("assets/noto-ss.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Base & Universal Reset
+   ========================================================================== */
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --bg-color: #fcfcfc;
+    --text-color: #222222;
+    --muted-color: #666666;
+    --border-color: #e0e0e0;
+    --accent-color: #800000; /* Academic Crimson */
+    --link-hover-bg: #f2f2f2;
+    --card-bg: #ffffff;
+}
+
+/*body
+{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Computer Modern", "Latin Modern Roman", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}*/
+
+/* ==========================================================================
+   1. Sticky Footer Layout Adjustment
+   ========================================================================== */
+html {
+    height: 100%;
+}
+
+body {
+    /* Replace/Update existing body styling with flexbox */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Computer Modern", "Latin Modern Roman", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Push the footer to the bottom on sparse pages */
+.foot {
+    margin-top: auto; /* Replaces fixed top margin with auto space pusher */
+    padding-top: 1.5rem;
+    font-family: "Computer Modern Sans", sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
+/* Links */
+a
+{
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.content-text p
+{
+    padding-bottom: 1.2rem;
+    padding-top: 1.2rem;
+    text-indent: 4ch;
+    text-align: justify;
+}
+
+.content-text .citation
+{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.content-text .citation .book
+{
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Navigation Bar & Subbars
+   ========================================================================== */
+.nav
+{
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 3.5rem;
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.95rem;
+}
+
+.nav-bar
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brush-them-aside
+{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav a
+{
+    color: var(--text-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+}
+
+.nav a:hover
+{
+    background-color: var(--link-hover-bg);
+    text-decoration: none;
+}
+
+.nav-special a
+{
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Dropdown Submenus (Formulae & Other Languages) */
+.brush-them-aside li
+{
+    position: relative;
+}
+
+.nav-subbar
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 170px;
+    z-index: 100;
+    border-radius: 4px;
+}
+
+.brush-them-aside li:hover .nav-subbar
+{
+    display: block;
+}
+
+.nav-subbar li a
+{
+    display: block;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Welcome / Hero Section
+   ========================================================================== */
+.welcome
+{
+    text-align: center;
+    margin: 3.5rem 0;
+}
+
+.welcome h1
+{
+    font-family: "Computer Modern", "Computer Modern CJK", serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    padding-top: 7.4rem;
+    padding-bottom: 7.4rem;
+}
+
+.welcome h2
+{
+    font-family: "Computer Modern", "Computer Modern CJK", serif;
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--muted-color);
+    margin-bottom: 0.5rem;
+    padding-top: 2.7rem;
+    padding-bottom: 2.7rem;
+}
+
+.welcome .welcome-but-emph, #tr_article_lang
+{
+    font-family: "Computer Modern Bright", "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.welcome h3, 
+.welcome h4
+{
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: var(--muted-color);
+    padding: 1.6rem;
+}
+
+.welcome h4
+{
+    font-family: "Computer Modern Bright", "Computer Modern Sans CJK", sans-serif;
+    padding: 1rem;
+}
+
+/* ==========================================================================
+   Separators
+   ========================================================================== */
+.separator
+{
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 3rem auto;
+    width: 65%;
+    position: relative;
+}
+
+.separator::after
+{
+    content: "§";
+    position: absolute;
+    top: -0.75em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-color);
+    padding: 0 0.6rem;
+    color: var(--muted-color);
+    font-size: 0.85rem;
+}
+
+.parag-separator
+{
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 2rem auto;
+    width: 50%;
+    position: relative;
+}
+
+/* ==========================================================================
+   Generic Section Headers
+   ========================================================================== */
+.generic-head h2
+{
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-color);
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Announcements & Latest Articles
+   ========================================================================== */
+.announcement
+{
+    margin: 2.5rem 0;
+}
+
+.announced
+{
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.announced-img img
+{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.5rem;
+}
+
+.announced a:first-of-type
+{
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+.announced p
+{
+    font-family: "Computer Modern Mono", "Computer Modern Sans CJK", monospace;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
+.announced a:last-of-type
+{
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid var(--accent-color);
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+}
+
+.announced a:last-of-type:hover
+{
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Formula Hook Section
+   ========================================================================== */
+.hook
+{
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.hook a
+{
+    color: var(--text-color);
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border: 1px dashed transparent;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.hook a:hover
+{
+    text-decoration: none;
+    background-color: var(--link-hover-bg);
+    border-color: var(--border-color);
+}
+
+/* ==========================================================================
+   Footer & Bottom Links
+   ========================================================================== */
+/*.foot
+{
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}*/
+
+.foot-panel
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.foot-links
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.foot-links-side p
+{
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+}
+
+.foot-links-side ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.foot-links-side a
+{
+    color: var(--muted-color);
+}
+
+.foot-links-side a:hover
+{
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   Responsive Layout Adjustment
+   ========================================================================== */
+@media (max-width: 640px)
+{
+    body
+    {
+        padding: 1.25rem 1rem;
+    }
+    
+    .welcome h1
+    {
+        padding-top: 2.7rem;
+        padding-bottom: 2.7rem;
+    }
+    
+    .welcome h2
+    {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+
+    .nav-bar
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brush-them-aside
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-subbar
+    {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 1rem;
+    }
+
+    .foot-links
+    {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Automatic Light/Dark Mode (System Preference)
+   ========================================================================== */
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --muted-color: #a0a0a0;
+        --border-color: #333333;
+        --accent-color: #ff6b6b; /* Soft crimson/coral for contrast against dark backgrounds */
+        --link-hover-bg: #1e1e1e;
+        --card-bg: #181818;
+    }
+
+    /* Keep thumbnail images slightly dimmed in dark mode to reduce harsh contrast */
+    .announced-img img
+    {
+        opacity: 0.88;
+        transition: opacity 0.2s ease;
+    }
+
+    .announced-img img:hover
+    {
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   Article Listing / Collapsible Documents Page
+   ========================================================================== */
+.collapsible-documents-container
+{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.collapsible-document
+{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collapsible-document:hover
+{
+    border-color: #cccccc;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.collapsible-document .left-image
+{
+    flex: 0 0 220px;
+}
+
+.collapsible-document .left-image img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    display: block;
+}
+
+.collapsible-document .right-text
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible-document .right-text h2
+{
+    font-family: "Computer Modern", "Computer Modern CJK", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.collapsible-document .right-text .tr_bulk_date
+{
+    font-family: "Computer Modern Mono", "Computer Modern Sans CJK", monospace;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
+.collapsible-document .right-text h4
+{
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.collapsible-document .right-text p
+{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+.collapsible-document .right-text a
+{
+    align-self: flex-start;
+    font-family: "Computer Modern Sans", "Computer Modern Sans CJK", sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid var(--accent-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.collapsible-document .right-text a:hover
+{
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Dark mode adjustments for document cards */
+@media (prefers-color-scheme: dark)
+{
+    .collapsible-document
+    {
+        box-shadow: none;
+    }
+    
+    .collapsible-document:hover
+    {
+        border-color: #444444;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    .collapsible-document .left-image img
+    {
+        opacity: 0.88;
+    }
+}
+
+body.dark-mode .collapsible-document
+{
+    box-shadow: none;
+}
+
+body.dark-mode .collapsible-document:hover
+{
+    border-color: #444444;
+}
+
+body.dark-mode .collapsible-document .left-image img
+{
+    opacity: 0.88;
+}
+
+/* Responsive adjustment for document containers on mobile */
+@media (max-width: 680px)
+{
+    .collapsible-document
+    {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .collapsible-document .left-image
+    {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto 0.5rem auto;
+    }
+}
+
+/* ==========================================================================
+   2. Target Title Glow Animation
+   ========================================================================== */
+@keyframes titleGlow
+{
+    0%
+    {
+        color: var(--accent-color);
+        text-shadow: 0 0 8px rgba(128, 0, 0, 0.25);
+    }
+    
+    100%
+    {
+        color: var(--text-color);
+        text-shadow: none;
+    }
+}
+
+.target-highlight
+{
+    animation: titleGlow 1.8s ease-out forwards;
+}
+
+/* ==========================================================================
+   Fixing even more collapsibles (symb?)
+   ========================================================================== */
+
+/* ==========================================================================
+   Widen Tables & Formulae Layout
+   ========================================================================== */
+
+/* Automatically relax page width limits on pages containing reference tables */
+body:has(table) {
+    max-width: 1100px;
+}
+
+/* Enable smooth horizontal scrolling on narrow screens */
+.colls-inner {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+/* Base Table Styling */
+.colls-inner table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.95rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Table Headers & Cells Padding */
+.colls-inner th, 
+.colls-inner td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Header Styling */
+.colls-inner th {
+    font-family: "Computer Modern Sans", sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--link-hover-bg);
+    color: var(--muted-color);
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+/* Alternating Row Shading for better readability */
+.colls-inner tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.015);
+}
+
+@media (prefers-color-scheme: dark) {
+    .colls-inner tr:nth-child(even) td {
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+}
+
+body.dark-mode .colls-inner tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Column Width Allocation */
+.colls-inner th:nth-child(1),
+.colls-inner td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+    font-size: 1.1rem; /* Make the rendered LaTeX symbol clear */
+}
+
+.colls-inner th:nth-child(2),
+.colls-inner td:nth-child(2) {
+    width: 15%;
+    font-family: "Computer Modern Mono", monospace;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.colls-inner th:nth-child(3),
+.colls-inner td:nth-child(3) {
+    width: 25%;
+}
+
+.colls-inner th:nth-child(4),
+.colls-inner td:nth-child(4) {
+    width: 28%;
+}
+
+.colls-inner th:nth-child(5),
+.colls-inner td:nth-child(5) {
+    width: 22%;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Modular Table & Formulae Styling
+   ========================================================================== */
+
+/* Outer scroll container for responsive layouts */
+.colls-inner {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+/* Base Shared Table Structure */
+.colls-inner table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.25rem 0 2rem 0;
+    font-size: 0.95rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Base Header Styling */
+.colls-inner th {
+    background-color: var(--link-hover-bg);
+    color: var(--muted-color);
+    font-family: "Computer Modern Sans", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+/* Base Cell Styling */
+.colls-inner td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 1.5;
+}
+
+.colls-inner tr:last-child td {
+    border-bottom: none;
+}
+
+/* Subtle Row Hover Effect across all tables */
+.colls-inner tr:hover td {
+    background-color: var(--link-hover-bg);
+}
+
+
+/* --------------------------------------------------------------------------
+   1. SYMBOL REFERENCE TABLES (5 Columns)
+   -------------------------------------------------------------------------- */
+
+/* Applied specifically to 5-column tables containing raw LaTeX command lists */
+.colls-inner table:has(th:nth-child(5)) th:nth-child(1),
+.colls-inner table:has(th:nth-child(5)) td:nth-child(1) {
+    width: 8%;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+/* Code accent applies ONLY to the Command column in symbol tables */
+.colls-inner table:has(th:nth-child(5)) td:nth-child(2) {
+    width: 16%;
+    font-family: "Computer Modern Mono", monospace;
+    font-size: 0.88rem;
+    color: var(--accent-color); /* Kept exclusively for raw LaTeX commands */
+}
+
+.colls-inner table:has(th:nth-child(5)) td:nth-child(3) { width: 24%; }
+.colls-inner table:has(th:nth-child(5)) td:nth-child(4) { width: 28%; }
+
+.colls-inner table:has(th:nth-child(5)) td:nth-child(5) {
+    width: 24%;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   2. MATHEMATICAL CONTENT TABLES (3 Columns: Number Theory, Algebra, Logic, etc.)
+   -------------------------------------------------------------------------- */
+
+/* Target 3-column structural tables or explicit math class */
+.colls-inner table:not(:has(th:nth-child(4))),
+.colls-inner table.math-table {
+    box-shadow: none;
+}
+
+/* Standardize font and color for math tables (no monospacing, no red accents) */
+.colls-inner table:not(:has(th:nth-child(4))) td,
+.colls-inner table.math-table td {
+    font-family: inherit;
+    color: inherit;
+    background-color: transparent; /* Clean uniform background */
+}
+
+/* Column Width Distributions for 3-Column Math Theorems/Formulae */
+.colls-inner table:not(:has(th:nth-child(4))) th:nth-child(1),
+.colls-inner table:not(:has(th:nth-child(4))) td:nth-child(1),
+.colls-inner table.math-table th:nth-child(1),
+.colls-inner table.math-table td:nth-child(1) {
+    width: 42%;
+    font-size: 0.98rem;
+}
+
+.colls-inner table:not(:has(th:nth-child(4))) th:nth-child(2),
+.colls-inner table:not(:has(th:nth-child(4))) td:nth-child(2),
+.colls-inner table.math-table th:nth-child(2),
+.colls-inner table.math-table td:nth-child(2) {
+    width: 33%;
+}
+
+.colls-inner table:not(:has(th:nth-child(4))) th:nth-child(3),
+.colls-inner table:not(:has(th:nth-child(4))) td:nth-child(3),
+.colls-inner table.math-table th:nth-child(3),
+.colls-inner table.math-table td:nth-child(3) {
+    width: 25%;
+    font-size: 0.88rem;
+    color: var(--muted-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. 2-COLUMN MATH TABLES (Future-Proofing for Quick Formulas/Identities)
+   -------------------------------------------------------------------------- */
+
+.colls-inner table:not(:has(th:nth-child(3))) th:nth-child(1),
+.colls-inner table:not(:has(th:nth-child(3))) td:nth-child(1) {
+    width: 50%;
+}
+
+.colls-inner table:not(:has(th:nth-child(3))) th:nth-child(2),
+.colls-inner table:not(:has(th:nth-child(3))) td:nth-child(2) {
+    width: 50%;
+}
+
+/* Note text below headings */
+.formulae-note {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-top: -0.25rem;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+}

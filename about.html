@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>About the site and me - Lusus Menstruus Mathematicus</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="About LMM">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </head>
+    <body onload="lmm_initializeLanguage()">
+        <div class="nav">
+            <ul class="nav-bar">
+                <div class="nav-special">
+                    <li><a id="tr_nav_main" href="index.html">Main</a></li>
+                </div>
+                <div class="brush-them-aside">
+                    <li><a id="tr_nav_who" href="">Who Am I?</a></li>
+                    <li><a id="tr_nav_serious" href="articles.html">Serious Stuff</a></li>
+                    <!--<li><a id="tr_nav_formulae" href="formulae.html">The Formulae</a>
+                        <ul class="nav-subbar">
+                            <li><a id="tr_nav_symbols" href="formulae.html#symbols">Symbols</a></li>
+                            <li><a id="tr_nav_number" href="formulae.html#number-theory">Number Theory</a></li>
+                            <li><a id="tr_nav_algebra" href="formulae.html#algebra">Algebra</a></li>
+                            <li><a id="tr_nav_logic" href="formulae.html#logic">Logic &amp; Set Theory</a></li>
+                            <li><a id="tr_nav_analysis" href="formulae.html#calculus">Analysis &amp; Calculus</a></li>
+                            <li><a id="tr_nav_other" href="formulae.html#other-disc">Other Disciplines</a></li>
+                        </ul>
+                    </li>-->
+                    <li><a id="tr_nav_lang" href="javascript:void(0);" onclick="lmm_setLanguage('en')">Other Languages</a>
+                        <ul class="nav-subbar">
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('zh'); return false;">中文（正體）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('cn'); return false;">中文（简体）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ja'); return false;">日本語</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('fr'); return false;">Français</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('es'); return false;">Español</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ru'); return false;">Русский</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="content-text">
+            <p id="tr_1">Hello everyone! I am Jason Cai, a maths hobbyist. You can most positively skip this piece of raconté if you wish to and jump straight to the pages you would like to visit, yet it's a true story behind this little website.</p>
+            <h2 id="tr_2">Who Am I, and Why Did I Create This Site?</h1>
+            <p id="tr_3">I feel obligated to reiterate a disclaimer: I am <span style="font-style: italic;">not</span> a mathematical professional nor have I ever engaged in any kind of occupation pertaining to mathematics per se. In fact, I do not even currently hold a full, valid degree in mathematical major. As such, subtle errors are somewhat likely to occur; nonetheless I always keep trying my best to maintain the accuracy of the content while I am writing or designing.</p>
+            <div class="parag-separator"></div>
+            <p id="tr_4">First, imagine you want to conduct a street interview. You go to a random yet boisterous street, and you ask any passerby who happens to bump into you. They may be a toddler, an adult, a teenager. It doesn't matter. Out of your curiosity, you ask them, ‘To you, what does it mean by maths?’</p>
+            <p id="tr_5">Obviously, I am quite occupied and therefore am rather unavailable to conduct such a leisurely interview. However, based on my observation and my personal experience, I am of high certainty to assure that their answers may look something like:</p>
+            <p id="tr_6">‘Maths &ndash;? <span style="font-style: italic;">Yippee!</span> I've just learnt 'em from my teachers! Like, doing one-plus-two-is-three? I know more! Three-minus-one-is-two!’</p>
+            <p id="tr_7">You nod, not because of total affirmation, but due to respect. Then here comes a teenager boy. You approach him to start your interview, and eventually you jot down:</p>
+            <p id="tr_8">‘Cr[_]p. Don't f[___]'ing mention maths. Actually I just got <span style="font-style: italic;">cooked</span> by those SATs, whatever <span style="font-style: italic;">Problem-solving, rate, advanced maths</span> they call.’</p>
+            <p id="tr_9">After consoling him verbally and saying thank you, you come across an adult. Now if you decide to continue, be sure to anticipate:</p>
+            <p id="tr_10">‘Maths? Why, don't scare me. I fear I haven't touched those books for <span style="font-style: italic;">years</span>, like, literally. If I'm to say, it's like, those calculus thingies? Algebra, finding value, problem solving?’</p>
+            <p id="tr_11">Now it's your turn. Reflect based on these dialogues. One thing one would observe in common is the so-called mathematics all the above fictional interviewees mention, is (I mean almost, well, surely I cannot be that absolute) purely <span style="font-style: italic;">computational</span>. By this I mean, more abruptly, you merely substitute a certain value given or derived by previous substitutions to derive the final answer; or, less aggressively, you just analyse the conditions given in a standard, predictable prompt which only requires a subset of all the knowledge you have acquired (analogously, the ‘toolkit’ on your hand), then apply suitable, prescribed sequence to derive the required value.</p>
+            <p id="tr_12">I might have just been a bit too aggressive (and also the following; apologies in advance). Don't get me wrong. In fact, the above pedagogy fluorishing till now proves that such methadologies resist time and the ever-changing world. It <span style="font-style: italic;">works</span>; it works by the fact that the basic, computational way of thoughts is, first, very easy to grasp, and one even might not be able to tell the rudimentary mathematical learning of the ‘theorems’ apart from learning other subjects, like the proven phenomena in the sciences. Then, studying per se becomes easier.</p>
+            <p id="tr_13">Second, the computational way is just so versatile that in almost every aspect of life you require mathematics up to this particular level. Now, pause and think and list the mathematical knowledge you have acquired up to high school. <span style="font-style: bold;">Arithmetic, rates and ratios, percentages and units</span> so that you can keep track of almost every plain and non-scientific number: bills, charges, changes, taxes, cuisine, planning&hellip; <span style="font-style: bold;">Exponents, Basic algebra, geometry and trigonometry</span> so that you could live a savvy life and occasionally the ability to digest high-tech or scientific contents. <span style="font-style: bold;">More trigonometry, differential calculus and integral calculus</span> so that you can do serious science, economics or programming. Most of them require substitution after understanding a certain portion of the whole picture, then treat the values obtained as mere numbers while utilising them in their expertise. Admittedly, knowing every single detail beneath the bonnet is largely not required in most aspects one would encounter in daily life, considering even some sciences do the same thing of grapping the values from somewhere established by other people and input it in yet another machine of this type.</p>
+            <p id="tr_14">Third, it's just good for standardised testing. Let me be candid: undergraduate and graduate mathematics is basically proofs, speaking in a highly generalised manner, for the sake of other closely-related, theoretical science subjects or (more often than not) mathematics itself. On the other hand, most people do not opt to take (especially pure) mathematics, and thus it makes assessments comprising purely testing the candidate's ability to construct rigorous proofs rather unnecessary and may not reflect the overwhelming portion of mathematical prerequisite in quotidian operations (see above). (Plus, proofs are hard to score and mark. Ask any maths professor for confirmation.) Then, it's almost perfect a choice to have the students follow the above universal sequence, and it works really well.</p>
+            <div class="parag-separator"></div>
+            <p id="tr_15">Since it works so well, the downside that any concept or item is bound to have (all alongside its benefits) is never too severe. Rather, it makes a math-lover feel <span style="font-style: italic;">pity</span>. To be candid, I have been one of them all the way until high school (additional information for somebody who may find it helpful: I'm still a high school student now). And I've come till now very well. The realisation intercepted me during high school was that there is something <span style="font-style: italic;">beyond</span> that. There are mathematical books (the monographs) that resemble none of my current textbooks or any ‘science-promoting series’ I had come across: exercises are almost completely proofs, with few command terms like ‘find’ something. There are fields that are called <span style="font-style: italic;">algebra</span>, but are not the algebra I perceived (instead, foreign terms to me like groups, rings, fields that are dedicated to the innermost, deepest mathematical structures sprouted everywhere). Those realisations come as hastily as a mother wanting to wake her son up. It, borrowing a cliché metaphor, opens a new door, arrantly novel to me.</p>
+            <p id="tr_16">Soon after the realisation did I start reading the literatures (cf. below), jotting down some basic proof, following the masterpieces' authors' steps nicely and obediantly, even attending physical workshops in-person for a very limited frequency. But I eventually decide that I can do even more.</p>
+            <p id="tr_17">I would like to use this opportunity to shout out to all the online content creators sharing the same goal with me. They promote mathematics to the same, general audience of mine with the same vision, mainly in multimedia forms, yet some of them produce content significantly more beautiful than me. The only motivation that drives me creating the content is that letting people realise that there's way more stuff beyond the rudimentary, computational mathematics is so important that worths being reiterated once again on top of all promotions, including mine.</p>
+            <p id="tr_18">Throughout this short (and potentially dismissive) autobiography, I do not force you to accept and align my views. I do not even require you ponder over and over about it. The only key important takeaway I would like to convey here is to hope all you guys acknowledge, accept and appreciate that the whole tower we call Mathematics contains way more than those found in different schools' curricula, and that's all to be aware of before drawing a perfect fullstop.</p>
+            <h2 id="tr_19">Great and Profound. Then How About This Website?</h1>
+            <p id="tr_20">Now I must admit that rather than being a very rigorous, if not pedantic, platform for academic discussion, this website serves rather as a aggregation of notes I've jotted down from my personal studies across my areas of interest within mathematics, including:</p>
+            <ul>
+                <li id="tr_20_1">Algebra (Linear, Abstract, etc.),</li>
+                <li id="tr_20_2">Set theory,</li>
+                <li id="tr_20_3">Some analysis,</li>
+                <li id="tr_20_4">Logic and et cetera.</li>
+            </ul>
+            <p id="tr_21">Not titling the site as 'Notes' or 'Observations' of whom from whom is only due to my personal preferences and opinion: I think that doing so will make this website too casual, personal, or if even worse, not accurate and arbitrary. Rest assured, although this website falls into the former two, I'll make it that it will never fall into the latter two.</p>
+            <p id="tr_22">I'll try to put my casual, everyday finding here, constituting one of the major function of this site &ndash; to try my personal best to help contribute to the whole Internet community as well as the mathematical one.</p>
+            <p id="tr_23">The other one is the formulae. I mean, it's important to see the proof (since it's the centre of advanced mathematics), or at least the rationale explaining how a formula is derived ('how it works'), but it's equally important to remember and absorb some common and handy consequences. On the other hand, the other way round is also important. So, I'll try to present the important formulae (of which the form of consequences constitutes the majority) as well as their proof (some are proposed by myself), up to the depth and breadth of the content I've learnt and internalised, mostly from my areas of interest.</p>
+            <p id="tr_24">I hope every viewer of my humble website finds appreciation and enjoyment, even passion, towards mathematics (possibly the same kind of enthusiasm of reading my long passage here), from my articles and other contents. This will make me very happy and will be great motivations.</p>
+            <p style="text-align: right;">Jason Cai <br> <span class="tr_bulk_date" data-date="August 2026">August 2026</span></p>
+        </div>
+        <div class="separator"></div>
+        <h2 id="tr_25">Personal and Informal Book Reviews</h2>
+        <div class="content-text">
+            <p id="tr_26">Here's a <span style="font-weight: bold;">curated</span> list of the mathematical literature I have come across solely by myself. Bear in mind that I am independent from the following authors or publishers, and am thus not affiliated whatsoever. The following list is but a genuine reflection and exposition of the pathway I have tried in-person. Most positively, alternative pathways (and literature materials) certainly exist and thus the enumeration below serves reference purposes more than as guidance of strict adhesion.</p>
+            <p id="tr_27">Also, note that the following order is not sequential.</p>
+            <h3 id="tr_28">Set theory</h3>
+            <p id="tr_29">For set theory, I recall that I started the journey by reading the book</p>
+            <p class="citation"><span class="book">Basic Set Theory</span> by Shen and Vereshchagin, published by the American Mathematical Society, ISBN 978&ndash;0&ndash;821&ndash;82731&ndash;4 <br> (The book is originally titled <span class="book">Начала Теории Множеств</span>, which is in Russian, yet it has been updated several times after the publication of the latest English translation)</p>
+            <p id="tr_30">Then, I savoured in</p>
+            <p class="citation"><span class="book">Naive Set Theory</span> by Halmos, published by Springer, ISBN 978&ndash;0&ndash;387&ndash;90092&ndash;6</p>
+            <h3 id="tr_31">Number Theory</h3>
+            <p id="tr_32">I personally perceive the following to be the ultimate G.O.A.T.:</p>
+            <p class="citation"><span class="book">Introduction to Number Theory</span> by the late Erickson, Vazzana and Garth, published by CRC Press, ISBN 978&ndash;1&ndash;032&ndash;92008&ndash;5</p>
+            <p id="tr_33">The following one, on the other hand, features simple and succinct explanations:</p>
+            <p class="citation"><span class="book">Elements of Number Theory</span> by John Stillwell, published by Springer, ISBN 978&ndash;7&ndash;510&ndash;00467&ndash;4</p>
+            <h3 id="tr_34">Algebra</h3>
+            <p id="tr_35">Surprisingly, the infamous <a href="https://link.springer.com/series/136">GTM series</a> by Springer is humane this time (or is it actually a survivor-bias?), given that they write literature with (potentially) accessible introductions in:</p>
+            <p class="citation"><span class="book">Lectures in Abstract Algebra</span>, a trilogy by Jacobson. It encompasses groups, rings, ideals, modules, Galois Theory and even Linear Algebra. Surprise!</p>
+            <p id="tr_36">For topics focusing on Linear Algebra per se though, I suggest everyone reading this, albeit the English version is hardly available. In fact, I read the original Japanese version of this classic, by the well-known Japanese algebraist Ichiroh Satake (佐武一郎先生). Sharing the same problem with the above book, the following is also quite old and may not ‘catch up’, but I personally guess it would be fine:</p>
+            <p class="citation"><span class="book">Linear Algebra</span> by Ichiroh Satake, original version <span class="book">『<ruby>線<rp>（</rp><rt>せん</rt><rp>）</rp>形<rp>（</rp><rt>けい</rt><rp>）</rp>代<rp>（</rp><rt>だい</rt><rp>）</rp>数<rp>（</rp><rt>すう</rt><rp>）</rp>学<rp>（</rp><rt>がく</rt><rp>）</rp></ruby>』</span> by <ruby>佐武<rp>（</rp><rt>さたけ</rt><rp>）</rp>一郎<rp>（</rp><rt>いちろう</rt><rp>）</rp></ruby></p>
+            <h3 id="tr_37">Analysis</h3>
+            <p id="tr_38">For real analysis that requires the mathematical rigour, I surmise that the following is even accessible to advanced high school students who get fairly well in computational (<span style="font-style: italic;">memorising</span> do I call; cf. above) calculus. A bit terse as it might be, it still expounds the mathematical maturity required to excel.</p>
+            <p class="citation"><span class="book">Real Analysis: With Proof Strategies</span> by Daniel W. Cunningham, published by CRC Press, ISBN 978&ndash;0&ndash;367&ndash;54966&ndash;4</p>
+            <p id="tr_39">If I were to recommend a book which is designed for complete beginners in computational Calculus but with adequate acquaintances in typical middle-school Algebra, <span style="font-style: italic;">and</span> that it preps not only for standardised tests, computational Calculus itself, but also bridges the authentic Real Analysis, then surprisingly there is one perfect match. Unfortunately, I cannot find an English translation, let alone being translated by the original author. I have read the original Chinese monograph instead:</p>
+            <p class="citation"><span class="book">Calculus in an Easy Way</span> (my proposed title based on semantic sense betwixt two languages), originally titled <span class="book">《輕鬆學點微積分》</span> by Yung-hung Zhuo (卓永鴻)</p>
+            <div class="parag-separator"></div>
+            <p id="tr_40">When I finish more, I will update the above pieces of information correspondingly.</p>
+        </div>
+        <div class="separator"></div>
+        <div class="foot">
+            <ul class="foot-panel">
+                <li>Jason Cai</li>
+                <li>&copy; 2026</li>
+            </ul>
+            <ul class="foot-links">
+                <!--<div class="foot-links-side">
+                    <p id="tr_dogma">The Mathematical Dogma</p>
+                    <ul>
+                        <li><a id="tr_those_symbols" href="formulae.html#symbols">Those \( \LaTeX \) symbols</a></li>
+                        <li><a id="tr_those_properties" href="formulae.html#number-theory">Those properties of numbers</a></li>
+                        <li><a id="tr_those_algebra" href="formulae.html#algebra">Those algebraic studies</a></li>
+                        <li><a id="tr_those_building" href="formulae.html#logic">Those building blocks</a></li>
+                        <li><a id="tr_those_continue" href="formulae.html#calculus">Those continuous-ness</a></li>
+                    </ul>
+                </div>-->
+                <div class="foot-links-side">
+                    <p id="tr_foot_articles">The Articles</p>
+                    <ul>
+                        <li><a href="articles.html#article-3">October 2026</a></li>
+                        <li><a href="articles.html#article-2">September 2026</a></li>
+                        <li><a href="articles.html#article-1">August 2026</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

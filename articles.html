@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Lusus Menstruus Mathematicus</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Articles - Lusus Menstruus Mathematicus (LMM)">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </head>
+    <body onload="lmm_initializeLanguage()">
+        <div class="nav">
+            <ul class="nav-bar">
+                <div class="nav-special">
+                    <li><a id="tr_nav_main" href="index.html">Main</a></li>
+                </div>
+                <div class="brush-them-aside">
+                    <li><a id="tr_nav_who" href="about.html">Who Am I?</a></li>
+                    <li><a id="tr_nav_serious" href="">Serious Stuff</a></li>
+                    <!--<li><a id="tr_nav_formulae" href="formulae.html">The Formulae</a>
+                        <ul class="nav-subbar">
+                            <li><a id="tr_nav_symbols" href="formulae.html#symbols">Symbols</a></li>
+                            <li><a id="tr_nav_number" href="formulae.html#number-theory">Number Theory</a></li>
+                            <li><a id="tr_nav_algebra" href="formulae.html#algebra">Algebra</a></li>
+                            <li><a id="tr_nav_logic" href="formulae.html#logic">Logic &amp; Set Theory</a></li>
+                            <li><a id="tr_nav_analysis" href="formulae.html#calculus">Analysis &amp; Calculus</a></li>
+                            <li><a id="tr_nav_other" href="formulae.html#other-disc">Other Disciplines</a></li>
+                        </ul>
+                    </li>-->
+                    <li><a id="tr_nav_lang" href="javascript:void(0);" onclick="lmm_setLanguage('en')">Other Languages</a>
+                        <ul class="nav-subbar">
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('zh'); return false;">中文（正體）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('cn'); return false;">中文（简体）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ja'); return false;">日本語</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('fr'); return false;">Français</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('es'); return false;">Español</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ru'); return false;">Русский</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <h1 id="tr_a_title">Collection of Jason Cai's Articles</h1>
+        <p id="tr_a_desc">The following articles are all written by Jason Cai. As mentioned in the <a href="about.html">introduction of this site</a>, it mainly consists of notes and mathematical insights drawn and developed by him, who is also the creator and the maintainer of this site.</p>
+        <div class="collapsible-documents-container">
+            <div class="collapsible-document">
+                <div class="left-image">
+                    <img src="assets/thumb/thumb-3-big.png" alt="The third article">
+                </div>
+                <div class="right-text">
+                    <h2 id="article-3">A Peculiar Way to Arrange Some Objects Combinatorially</h2>
+                    <p class="tr_bulk_date" data-date="October 2026">October 2026</p>
+                    <h4 class="tr_bulk_abstract">Abstract</h4>
+                    <p>A natural yet relatively advanced question to ask in elementary combinatorics would be the arrangement of some kinds of objects, which may be distinguishable or identical, into containers (called ‘groups’ hereafter). Then, additional constraints such as the minimum number of each group and some additional composition requirements may be given. This essay attempts to generalise the concepts to a certain extent. After that, a suitable example would be given to illustrate the concepts.</p>
+                    <a class="tr_bulk_download" href="assets/docs/3.pdf" target=_blank>Download Immediately</a>
+                </div>
+            </div>
+            <div class="collapsible-document">
+                <div class="left-image">
+                    <img src="assets/thumb/thumb-2-big.png" alt="The second article">
+                </div>
+                <div class="right-text">
+                    <h2 id="article-2">Proofs and Usages of the Cantor-Bernstein-Schröder Theorem</h2>
+                    <p class="tr_bulk_date" data-date="September 2026">September 2026</p>
+                    <h4 class="tr_bulk_abstract">Abstract</h4>
+                    <p>This article aims to include a gentle revision for the concept that treats function as a specific kind of relations, the latter of which are but sets with ordered pairs. Then, this article also gives a proof of one of the most famous consequences in Elementary Set Theory, the Cantor-Bernstein-Schröder Theorem. Finally, some useful yet immediate corollaries are given. Diagrams are used extensively as a means of conveying informtion more concisely.</p>
+                    <a class="tr_bulk_download" href="assets/docs/2.pdf" target=_blank>Download Immediately</a>
+                </div>
+            </div>
+            <div class="collapsible-document">
+                <div class="left-image">
+                    <img src="assets/thumb/thumb-1-big.png" alt="The first article">
+                </div>
+                <div class="right-text">
+                    <h2 id="article-1">A Naive Linear Regression Perspective on the Cases in Faulhaber's Formulae</h2>
+                    <p class="tr_bulk_date" data-date="August 2026">August 2026</p>
+                    <h4 class="tr_bulk_abstract">Abstract</h4>
+                    <p>The well-known Faulhaber’s Formulae, discovered by J. Faulhaber (1631) and found in Knuth (1993), give a handy generalisation of the sum of conseuctive natural integers all raised to an arbitrary power of certain natural integers; in fact, the special cases of power 1 and 2 are so well-known that they are printed across textbooks in some mathematical training institutions. However, in this article, we try to use a naive method of solving simple (yet sometimes tedious) systems of linear equations to acquire formulae equivalent to the aforementioned.</p>
+                    <a class="tr_bulk_download" href="assets/docs/1.pdf" target=_blank>Download Immediately</a>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="foot">
+            <ul class="foot-panel">
+                <li>Jason Cai</li>
+                <li>&copy; 2026</li>
+            </ul>
+            <ul class="foot-links">
+                <!--<div class="foot-links-side">
+                    <p id="tr_dogma">The Mathematical Dogma</p>
+                    <ul>
+                        <li><a id="tr_those_symbols" href="formulae.html#symbols">Those \( \LaTeX \) symbols</a></li>
+                        <li><a id="tr_those_properties" href="formulae.html#number-theory">Those properties of numbers</a></li>
+                        <li><a id="tr_those_algebra" href="formulae.html#algebra">Those algebraic studies</a></li>
+                        <li><a id="tr_those_building" href="formulae.html#logic">Those building blocks</a></li>
+                        <li><a id="tr_those_continue" href="formulae.html#calculus">Those continuous-ness</a></li>
+                    </ul>
+                </div>-->
+                <div class="foot-links-side">
+                    <p id="tr_foot_articles">The Articles</p>
+                    <ul>
+                        <li><a href="#article-3">October 2026</a></li>
+                        <li><a href="#article-2">September 2026</a></li>
+                        <li><a href="#article-1">August 2026</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

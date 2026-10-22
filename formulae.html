@@ -1,0 +1,796 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Lusus Menstruus Mathematicus</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Articles - Lusus Menstruus Mathematicus (LMM)">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </head>
+    <body onload="lmm_initializeLanguage()">
+        <div class="nav">
+            <ul class="nav-bar">
+                <div class="nav-special">
+                    <li><a id="tr_nav_main" href="index.html">Main</a></li>
+                </div>
+                <div class="brush-them-aside">
+                    <li><a id="tr_nav_who" href="about.html">Who Am I?</a></li>
+                    <li><a id="tr_nav_serious" href="articles.html">Serious Stuff</a></li>
+                    <li><a id="tr_nav_formulae" href="">The Formulae</a>
+                        <ul class="nav-subbar">
+                            <li><a id="tr_nav_symbols" href="#symbols">Symbols</a></li>
+                            <li><a id="tr_nav_number" href="#number-theory">Number Theory</a></li>
+                            <li><a id="tr_nav_algebra" href="#algebra">Algebra</a></li>
+                            <li><a id="tr_nav_logic" href="#logic">Logic &amp; Set Theory</a></li>
+                            <li><a id="tr_nav_analysis" href="#calculus">Analysis &amp; Calculus</a></li>
+                            <li><a id="tr_nav_other" href="#other-disc">Other Disciplines</a></li>
+                        </ul>
+                    </li>
+                    <li><a id="tr_nav_lang" href="javascript:void(0);" onclick="lmm_setLanguage('en')">Other Languages</a>
+                        <ul class="nav-subbar">
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('zh'); return false;">中文（正體）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('cn'); return false;">中文（简体）</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ja'); return false;">日本語</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('fr'); return false;">Français</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('es'); return false;">Español</a></li>
+                            <li><a href="javascript:void(0);" onclick="lmm_setLanguage('ru'); return false;">Русский</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div id="symbols" class="colls-section">
+            <div class="colls-header">
+                <h1>\( \LaTeX \) symbols</h1>
+                <span class="colls-icon"></span>
+            </div>
+            <p>This section is dedicated to amalgamate different \( \LaTeX \) symbol collection entries online, claiming to be representative, which the author has come across. Surely by no means is the following table exhaustive, yet it suffices when encountering and expressing many well-known mathematical facts, including the following sections.</p>
+            <p>Please feel free to search across the table using the search command in your browser; the symbols themselves are unable to be searched due to the limitation in MathJax.</p>
+            <div class="colls-content">
+                <div class="colls-inner">
+                    <h3>Elementary binary operators</h3>
+                    <table>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Command</th>
+                            <th>Name</th>
+                            <th>Mathematical Example</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>\( \pm \)</td>
+                            <td>\pm</td>
+                            <td>Plus or minus</td>
+                            <td>\( x^2 = 4 \implies x = \pm 2 \)</td>
+                            <td>Do not use to denote the result of a square root!</td>
+                        </tr>
+                        <tr>
+                            <td>\( \mp \)</td>
+                            <td>\mp</td>
+                            <td>Minus or plus</td>
+                            <td>\( \cos{(\theta+\phi)} = \cos{\theta}\cos{\phi} \mp \sin{\theta}\sin{\phi} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \times \)</td>
+                            <td>\times</td>
+                            <td>Cartesian product, or 'multiplication' in general in an elementary perspective.</td>
+                            <td>\( \mathbb{N} \times \mathbb{N} = \{(0, 0), (0, 1), \ldots, (1, 0), (1, 1), \ldots, (2, 0), \ldots\} \)</td>
+                            <td>In Linear Algebra, it is used to denote a vector's cross-product.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \div \)</td>
+                            <td>\div</td>
+                            <td>Division</td>
+                            <td>\( 6 \div 3 = 2 \)</td>
+                            <td>Not commonly used in advanced mathematics; fractions or inverses are used instead.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \cdot \)</td>
+                            <td>\cdot</td>
+                            <td>Multiplication</td>
+                            <td>\( 2 \cdot 5 = 10 \)</td>
+                            <td>In Linear Algebra, it is used to denote a vector's dot-product.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \ast \)</td>
+                            <td>\ast</td>
+                            <td>Asterisk</td>
+                            <td>Let \( (H, \ast) \le (G, \ast) \) be a subgroup.</td>
+                            <td>Usually denotes another form of 'multiplication' in Abstract Algebra.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \star \)</td>
+                            <td>\star</td>
+                            <td>Star</td>
+                            <td>Let \( (G, \star) \) be a group.</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \dagger \)</td>
+                            <td>\dagger</td>
+                            <td>Dagger</td>
+                            <td></td>
+                            <td>Usually as a symbol for footnote.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \ddagger \)</td>
+                            <td>\ddagger</td>
+                            <td>Double dagger</td>
+                            <td></td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \amalg \)</td>
+                            <td>\amalg</td>
+                            <td>Disjoint union of coproduct of sets</td>
+                            <td>\( A^\ast = \{1, 2\} \times \{1\},\ B^\ast = \{2, 3\} \times \{2\} \) <br> \( \implies A \amalg B = \{(1,1),(2,1),(2,2),(3,2)\} \)</td>
+                            <td>It has a larger counterpart called coproduct operator (cf. below).</td>
+                        </tr>
+                        <tr>
+                            <td>\( \cap \)</td>
+                            <td>\cap</td>
+                            <td>Intersection of sets</td>
+                            <td>\( \{1,2,3\} \cap \{3,4,5\} = \{3\} \)</td>
+                            <td>It also conveys roughly the same idea outside Set Theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \cup \)</td>
+                            <td>\cup</td>
+                            <td>Union of sets</td>
+                            <td>\( \{1,2,3\} \cup \{3,4,5\} = \{1,2,3,4,5\} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \uplus \)</td>
+                            <td>\uplus</td>
+                            <td>Union of multisets</td>
+                            <td>\( \{1,1,2\} \uplus \{3,4,4\} = \{1,1,2,3,4,4\} \)</td>
+                            <td>Used in Multiset Set Theory</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqcap \)</td>
+                            <td>\sqcap</td>
+                            <td>Meet operation in lattices</td>
+                            <td>Define \( x \preceq y \) as \( x \mid y \). <br> \( 12 \sqcap 18 = \mathrm{gcd}(12,18) = 6 \)</td>
+                            <td>Seen in lattice theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqcup \)</td>
+                            <td>\sqcup</td>
+                            <td>Join operation in lattices</td>
+                            <td>Using the above definition, <br> \(4 \sqcup 6 = \mathrm{lcm}(4,6) = 12 \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \vee \)</td>
+                            <td>\vee</td>
+                            <td>Logical 'and' operation</td>
+                            <td>\( \top \vee \bot \equiv \bot, \top \vee \top \equiv \top \)</td>
+                            <td>Used primarily in formal logic.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \wedge \)</td>
+                            <td>\wedge</td>
+                            <td>Logical 'or' operation</td>
+                            <td>\( \bot \wedge \top \equiv \top, \bot \wedge \bot \equiv \bot \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \oplus \)</td>
+                            <td>\oplus</td>
+                            <td>(Many.) 'Symmetric difference' particularly in Set Theory</td>
+                            <td>In Set Theory, \( \{1,2,3\} \oplus \{3,4,5\} = \{1,2,4,5\} \). (The \( \bigtriangleup \) symbol is also used; cf. below.)</td>
+                            <td>Of course, it is used in many more disciplines. For example, in Linear Algebra, it denotes a direct sum.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \otimes \)</td>
+                            <td>\otimes</td>
+                            <td>Tensor product</td>
+                            <td>If \( \vec{v} = \begin{bmatrix}1 \\ 2\end{bmatrix} \) and \(\vec{w} = \begin{bmatrix}4 \\ 5 \\ 6\end{bmatrix \), then <br> \( \vec{v} \otimes \vec{w} = \begin{bmatrix}1 \times \begin{bmatrix}4 &amps; 5 &amp; 6\end{bmatrix} \\ 2 \times \begin{bmatrix}4 &amp; 5 &amp; 6\end{bmatrix}\end{bmatrix} = \begin{bmatrix}4 &amp; 5 &amp; 6 \\ 8 &amp; 10 &amp; 12\end{bmatrix} \)</td>
+                            <td>Seen usually in Tensor Algebra.</td>
+                        </td>
+                        <tr>
+                            <td>\( \circ \)</td>
+                            <td>\circ</td>
+                            <td>Compound function</td>
+                            <td>\( f^{-1} \circ f = x, \quad f \circ f^{-1} = y \)</td>
+                            <td>This operator is right-associative, meaning, it reads from right to left.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \bullet \)</td>
+                            <td>\bullet</td>
+                            <td>Bullet</td>
+                            <td>Define \( (R, +, \bullet) \) to be a ring.</td>
+                            <td>Mainly as a custom symbol for multiplication-like custom operators.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \diamond \)</td>
+                            <td>\diamond</td>
+                            <td>Diamond</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \lhd \)</td>
+                            <td>\lhd</td>
+                            <td>Left-hand arrowhead; proper normal subgroup</td>
+                            <td>\( H \lhd G \)</td>
+                            <td>Used mainly in Abstract Algebra.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \rhd \)</td>
+                            <td>\lhd</td>
+                            <td>Right-hand arrowhead</td>
+                            <td>\( G \rhd H \)</td>
+                            <td>As a reversed notation for the above.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \unlhd \)</td>
+                            <td>\unlhd</td>
+                            <td>Underlined left-hand arrowhead; normal subgroup</td>
+                            <td>\( H \unlhd G \)</td>
+                            <td>Used mainly in Abstract Algebra.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \unrhd \)</td>
+                            <td>\unrhd</td>
+                            <td>Underlined right-hand arrowhead</td>
+                            <td>\( G \unrhd H \)</td>
+                            <td>As a reversed notation for the above.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \oslash \)</td>
+                            <td>\oslash</td>
+                            <td>Hadamard division</td>
+                            <td>Given two matrices \( A, B \) with same dimention \( m \times n \), <br> if \( C = A \oslash B, C_{ij} = \frac{A_{ij}}{B_{ij}} \)</td>
+                            <td>Used as a custom operator otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \odot \)</td>
+                            <td>\odot</td>
+                            <td>Hadamard multiplication</td>
+                            <td>Similarly, if \( D = A \odot B, D_{ij} = A_{ij} \cdot B_{ij} \)</td>
+                            <td>Used as a custom operator otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \bigcirc \)</td>
+                            <td>\bigcirc</td>
+                            <td>Big circle</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \triangleleft \)</td>
+                            <td>\triangleleft</td>
+                            <td>Left triangle</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \Diamond \)</td>
+                            <td>\Diamond</td>
+                            <td>Big diamond</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \bigtriangleup \)</td>
+                            <td>\bigtriangleup</td>
+                            <td>Big triangle up; symmetric difference</td>
+                            <td>In Set Theory, \( \{1,2,3\} \bigtriangleup \{3,4,5\} = \{1,2,4,5\} \)</td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \bigtriangledown \)</td>
+                            <td>\bigtriangledown</td>
+                            <td>Big triangle down</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \Box \)</td>
+                            <td>\Box</td>
+                            <td>Box</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \triangleright \)</td>
+                            <td>\triangleright</td>
+                            <td>Right triangle</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \triangledown \)</td>
+                            <td>\triangledown</td>
+                            <td>Down triangle</td>
+                            <td></td>
+                            <td>Custom symbol for placeholder, custom operators or layout.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \setminus \)</td>
+                            <td>\setminus</td>
+                            <td>Set minus</td>
+                            <td>\( \{1,2,3,4,5\} \setminus \{2,4\} = \{1,3,5\} \)</td>
+                            <td>Used almost exclusively in set theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \wr \)</td>
+                            <td>\wr</td>
+                            <td>Wreath product</td>
+                            <td>\( \lvert A \wr_\Omega H \rvert = \lvert A \rvert^{\lvert \Omega \rvert} \lvert H \rvert \)</td>
+                            <td>Used mainly in Group Theory, in Abstract Algebra.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqrt[n]{x} \)</td>
+                            <td>\sqrt[n]{x} or \sqrt{x}</td>
+                            <td>Root symbol</td>
+                            <td>\( \sqrt{4} = 2, \sqrt[3]{27} = 3, \sqrt[n]{x} = x^{\frac1n} \)</td>
+                            <td>Omit the \( n \) in the bracket if only the square root sign is desired.</td>
+                        </tr>
+                        <tr>
+                            <td>\( a^b \)</td>
+                            <td>a^b</td>
+                            <td>Exponent</td>
+                            <td>\( 3^3 = 27, 4^4 = 256 \)</td>
+                            <td>This should not be considered a 'binary operator' if strictly in \( \LaTeX \)-speak, yet it behaves similarly, so the author has put it down here.</td>
+                        </tr>
+                    </table>
+                    <p class="formulae-note">Note: operators that are extremely common or useful, especially those directly available on the usual keyboards, can be directly keyed into the formulae. Examples include plus (+), minus (-) and colon (:, as proportion).</p>
+                    <h3>Relation Symbols</h3>
+                    <table>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Command</th>
+                            <th>Name</th>
+                            <th>Mathematical Example</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>\( \le \)</td>
+                            <td>\le</td>
+                            <td>Less than or equal to</td>
+                            <td>\( 3 \le 5, 4 \le 4 \)</td>
+                            <td>As the stimulus and the foundational notion of an 'order' in advanced mathematics.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \ge \)</td>
+                            <td>\ge</td>
+                            <td>Greater or equal to</td>
+                            <td>\( 5 \ge 3, 4 \ge 4 \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \neq \)</td>
+                            <td>\neq</td>
+                            <td>Not equal to</td>
+                            <td>\( 3 \neq 4 \)</td>
+                            <td>This is one of the most taught notions in basic mathematics.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sim \)</td>
+                            <td>\sim</td>
+                            <td>Similar to</td>
+                            <td>Define relation \( x \sim y \) if \( x \mid y \).</td>
+                            <td>Apart from the above stimulus, this symbol is also used in many disciplines. For example, in Geometry, it means 'similar shapes'.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \simeq \)</td>
+                            <td>\simeq</td>
+                            <td>Similar or equal to; Having the same cardinality of</td>
+                            <td>In set theory, \( \mathbb{N} \simeq \mathbb{Z} \simeq \mathbb{Q} \)</td>
+                            <td>Stripped set theory away, it also means 'asymptotically equivalent to' or generically 'approximately equal to', despite a dedicated symbol for the latter.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \ll \)</td>
+                            <td>\ll</td>
+                            <td>Far less than</td>
+                            <td>\( \pi \ll e^{e^e} \)</td>
+                            <td>The usage is contingent on context and is rather subjective.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \gg \)</td>
+                            <td>\gg</td>
+                            <td>Far greater than</td>
+                            <td>\( 10^50 \gg e \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \doteq \)</td>
+                            <td>\doteq</td>
+                            <td>Approximately equal to (in Calculus etc.)</td>
+                            <td>When \( x \rightarrow 0\), \( \frac{\sin{x}}{x} \doteq 1 \)</td>
+                            <td>This is a variation of the 'approximately equal to' operator.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \subset \)</td>
+                            <td>\subset</td>
+                            <td>Proper subset of</td>
+                            <td>\( \mathbb{N} \subset \mathbb{R} \)</td>
+                            <td>Generally used in set theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \supset \)</td>
+                            <td>\supset</td>
+                            <td>Proper superset of</td>
+                            <td>\( \mathbb{Q} \supset \mathbb{N} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \approx \)</td>
+                            <td>\approx</td>
+                            <td>Approximately equal to</td>
+                            <td>\( \pi \approx e \approx \sqrt{g} \approx 3 \)</td>
+                            <td>This is the most commonly known symbol dedicatd to denoting 'approximately equal to', yet sometimes it may be subjective.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \asymp \)</td>
+                            <td>\asymp</td>
+                            <td>Asymptotic operator; Alternative for the big-\( \Theta \)</td>
+                            <td>\( f \asymp g \iff \exists C,D > 0: C\lvert g \rvert \le \lvert f \rvert \le D \lvert g \rvert \)</td>
+                            <td>This is considered part of the Asymptotic Notation.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \subseteq \)</td>
+                            <td>\subseteq</td>
+                            <td>Subset of</td>
+                            <td>\( \mathbb{N} \subseteq \mathbb{Z}, \mathbb{Q} \subseteq \mathbb{Q} \)</td>
+                            <td>This is used the most in Set Theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \supseteq \)</td>
+                            <td>\supseteq</td>
+                            <td>Superset of</td>
+                            <td>\( \mathbb{Q} \supseteq \mathbb{Z}, \mathbb{R} \supseteq \mathbb{R} \)</td>
+                            <td>As a reverse of the above symbol.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \cong \)</td>
+                            <td>\cong</td>
+                            <td>Congruent to</td>
+                            <td>\( \triangle ABC \cong \triangle DEF \)</td>
+                            <td>Used mainly in elementary Geometry.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \smile \)</td>
+                            <td>\smile</td>
+                            <td>Cup product</td>
+                            <td>In Algebraic Topology, if \( \alpha^p, \beta^q\) are a \( p \)- and \( q \)-cochain respectively, then <br> \( (\alpha^p \smile \beta^q)(\sigma) = \alpha^p(\sigma \circ \iota_{0,1,\ldots,p}) \cdot \beta^q(\sigma \circ \iota_{p,p+1,\ldots,p+q}) \)</td>
+                            <td>Also used similarly in Homological Algebra.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \frown \)</td>
+                            <td>\frown</td>
+                            <td>Cap product</td>
+                            <td>In Algebraic Topology, a singular chain \( \sigma: \Delta^p \rightarrow X \) with singular cochain \( \psi \in C^q(X; R) \) has its cap product <br> \( \sigma \frown \psi = \psi(\sigma \mid_{[v_0, \ldots, v_q]}) \sigma \mid_{[v_q, \ldots, v_p]} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqsubset \)</td>
+                            <td>\sqsubset</td>
+                            <td>Square proper subset</td>
+                            <td>In Multiset Theory, <br> \( \{a,a,b\} \sqsubset \{a,a,b,b\} \)</td>
+                            <td>Also used in many other disciplines, such as Computer Science, the usual Set Theory and Lattice Theory.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqsupset \)</td>
+                            <td>\sqsupset</td>
+                            <td>Square proper superset</td>
+                            <td>\( \{a,a,b,b\} \sqsupset \{a,a,b\} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqsubseteq \)</td>
+                            <td>\sqsubseteq</td>
+                            <td>Square subset of</td>
+                            <td>\( \{a,a,b\} \sqsubseteq \{a,a,b\} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \sqsupseteq \)</td>
+                            <td>\sqsupseteq</td>
+                            <td>Square superset of</td>
+                            <td>\( \{a,a,b\} \sqsupset \{a,a,b\} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \equiv \)</td>
+                            <td>\equiv</td>
+                            <td>Equivalent to; Congruent to</td>
+                            <td>In Number Theory, we have \( a^{\varphi{n}} \equiv 1 \pmod{p} \).</td>
+                            <td>Also widely used in logic; used in discussing 'identities' in elementary mathematics.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \propto \)</td>
+                            <td>\propto</td>
+                            <td>Proportional to</td>
+                            <td>\( PV \propto nT \)</td>
+                            <td>When denoting inverse proportion, apply reciprocal to the right-hand-side.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \bowtie \)</td>
+                            <td>\bowtie</td>
+                            <td>Bow tie; natural join operator in Relational Algebra</td>
+                            <td>In Relational Algebra, \( R \bowtie S = \{r \cup S \mid r \in R \wedge s \in S \wedge Fun(r \cup S)\} \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( \in \)</td>
+                            <td>\in</td>
+                            <td>In</td>
+                            <td>\( 3 \in \mathbb{Z} \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( \ni \)</td>
+                            <td>\ni</td>
+                            <td>Contains</td>
+                            <td>\( \mathbb{Z} \ni 3 \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( \prec \)</td>
+                            <td>\prec</td>
+                            <td>Preceding</td>
+                            <td>Define \( x \prec y \) if \( x \mid y \).</td>
+                            <td>Used mainly in advanced Algebra to avoid confusion with \( \le \).</td>
+                        </tr>
+                        <tr>
+                            <td>\( \succ \)</td>
+                            <td>\succ</td>
+                            <td>Succeeding</td>
+                            <td>In the above definition, \( y \succ x \).</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \vdash \)</td>
+                            <td>\vdash</td>
+                            <td>Entails, derives</td>
+                            <td>\( \Gamma \vdash \phi \)</td>
+                            <td>Used in formal logic; also called a 'turnstile'.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \dashv \)</td>
+                            <td>\dashv</td>
+                            <td>Is sufficient for</td>
+                            <td>\( \phi \dashv \Gamma \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \perp \)</td>
+                            <td>\perp</td>
+                            <td>Perpendicular to</td>
+                            <td>\( \overline{AB} \perp \overline{CD} \)</td>
+                            <td>This notion is mainly used in Geometry.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \parallel \)</td>
+                            <td>\parallel</td>
+                            <td>Parallel to</td>
+                            <td>\( \overline{RS} \parallel \overline{XY} \)</td>
+                            <td>Ditto.</td>
+                        </tr>
+                        <tr>
+                            <td>\( \mid \)</td>
+                            <td>\mid</td>
+                            <td>Divides</td>
+                            <td>\( 3 \mid 15 \)</td>
+                            <td>This notion is mainly used in Number Theory.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div id="formulae" class="colls-section">
+            <div class="colls-header">
+                <h1>Formulae and important consequences</h1>
+                <span class="colls-icon"></span>
+            </div>
+            <div class="colls-content">
+                <div class="colls-inner">
+                    <h3 id="number-theory">(Elementary) Number Theory</h3>
+                    <p>(Note: in the following table, \( a, b, c, k \) are all integers and \( p \) is a prime, unless otherwise specified.)
+                    <table>
+                        <tr>
+                            <th>Mathematical representation</th>
+                            <th>Example</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>\( a \mid b \implies a \mid bc \)</td>
+                            <td>\( 2 \mid 14 \) so \( 2 \mid 182 \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( a \mid b \wedge b \mid a \implies a = \pm b \)</td>
+                            <td>\( a \) could only be either 3 or -3 if \( a \mid 3 \) and \( 3 \mid a \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( c \ne 0 \Longrightarrow a \mid b \iff ac \mid bc \)</td>
+                            <td>It makes sense when \( 3 \mid 18 \) when \( 54 \mid 324 \) and vice versa</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( a \mid b \wedge b \mid c \implies a \mid c \)</td>
+                            <td>Because \( 3 \mid 15 \) and \( 15 \mid 75 \), then clearly \( 3 \mid 75 \)</td>
+                            <td>Known as the transitivity property of divisibility</td>
+                        </tr>
+                        <tr>
+                            <td>Any \( a \) can be written as \( bk + r \) where \( r \) is an integer such that \( 0 \le r &lt; b \)</td>
+                            <td>\( 92 = 7 \cdot 13 + 1 \) and \( 126 = 7 \cdot 18 + 0 \)</td>
+                            <td>Known as the Division Algorithm</td>
+                        </tr>
+                        <tr>
+                            <td>If \( p \mid ab \) then either \( p \mid a \) or \( p \mid b \) (assume \( a \ne b \))</td>
+                            <td>Note that \( 7 \mid 91 = 7 \cdot 13 \) and \( 7 \mid 7 \) but \( 7 \nmid 13 \)</td>
+                            <td>Known as the Euclid's Lemma</td>
+                        </tr>
+                        <tr>
+                            <td>\( \mathrm{gcd}(ac, bc) = c\mathrm{gcd}(a, b) \) and \( \mathrm{lcm}(ac, bc) = c\mathrm{lcm}(a, b) \)</td>
+                            <td>\( \mathrm{gcd}(30, 42) = 6 \) whilst \( 2 \cdot \mathrm{gcd}(30/2=15, 42/2=21) = 3 \); the rest follows</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>\( \mathrm{gcd}(a, b) \cdot \mathrm{lcm}(a, b) = ab \)</td>
+                            <td>Look at \( \mathrm{gcd}(35, 75) = 5 \) and \( \mathrm{lcm}(35, 75) = 525 \). Then \( 5 \cdot 525 = 2\ 625 = 35 \cdot 75 \)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>If \( a = bk + r \) where \( r \) satisfies the constraints in the Division Algorithm, then \( \mathrm{gcd}(a, b) = \mathrm{gcd}(b, r) \)</td>
+                            <td>\( 144 = 32 \cdot 4 + 16 \) whilst \( \mathrm{gcd}(144, 32) = 16 \) and \( \mathrm{gcd}(32, 16) = 16 \)</td>
+                            <td>This is extremely useful in proving the Euclidean Algorithm</td>
+                        </tr>
+                        <tr>
+                            <td>\( \exists \) pair of integral solution \( (\alpha, \beta) \) to a Diophantine equation \( ax + by = c \iff \mathrm{gcd}(a, b) \mid c \)</td>
+                            <td>It is immediately apparent that for \( 93x + 33y = 12 \) there is solution \( (5, -14) \), whilst no matter how would one not be able to find integral solution to \( 15x + 35y = 2 \)</td>
+                            <td>This is very useful 'guiding lamp' in finding integral solution when solving Diophantine equations</td>
+                        </tr>
+                        <tr>
+                            <td>Every positive integer excluding 1 can be written uniquely as product of prime factors (a sole factor is acceptable: a prime has only one prime factor)</td>
+                            <td>Thanks to the commutativity property, no matter how one factorises, \( 1\ 001 \) is always equal to \( 7 \cdot 11 \cdot 13 \) regardless of order</td>
+                            <td>This is the Fundamental Theorem of Arithmetic</td>
+                        </tr>
+                        <tr>
+                            <td>The integral congruence modulo \( n \) is an equivalent relation</td>
+                            <td>Omitted</td>
+                            <td>This includes reflexivity, symmetry and transitivity</td>
+                        </tr>
+                        <tr>
+                            <td>If any single pair of any two numbers \( n_a, n_b \) from the set comprising purely integers \( \{n_1, n_2, \ldots, n_k\} \) gives \( \mathrm{gcd}(n_a, n_b) \), and \( \{r_1, r_2, \ldots, r_k \} \) are any numbers, then \( \exists x \) satisfying \[ x \equiv r_1 \pmod n_1 \] \[ x \equiv r_2 \pmod n_2 \] \[ \vdots \] \[ x \equiv r_k \pmod n_k \]</td>
+                            <td>Omitted</td>
+                            <td>This states the famous Chinese Remainder Theorem (first discussed in Sun-tzu Suan-ching)</td>
+                        </tr>
+                        <tr>
+                            <td>If \( a \not\equiv 0 \pmod p \) then \[ a^{p-1} \equiv 1 \pmod p \]</td>
+                            <td>\( 10^{126} \equiv 1 \pmod{127} \)</td>
+                            <td>This is the Fermat's (Little) Theorem</td>
+                        </tr>
+                        <tr>
+                            <td>More generally, if \( \mathrm{gcd}(a, n) = 1 \) then \[ a^{\phi(n)} \equiv 1 \pmod n \]</td>
+                            <td>\( 10^{192} \equiv 1 \pmod{221} \)</td>
+                            <td>This is the Euclid's (Totient) Theorem</td>
+                        </tr>
+                        <tr>
+                            <td>The value of \( \phi(n_1n_2) \), where \( n_1, n_2 \in \mathbb{Z}, \quad \mathrm{gcd}(n_1, n_2) = 1 \) is \( \phi(n_1)\phi(n_2) \)</td>
+                            <td>\( \phi(221) = \phi(17)\phi(13) = 16 \cdot 12 = 192 \)</td>
+                            <td>This is one of the available methods to compute Euler's totient function; see below</td>
+                        </tr>
+                        <tr>
+                            <td>Assume that the factorisation of a number \( a \) is \( p_1^{\alpha_1} p_2^{\alpha_2} \ldots p_k^{\alpha_k} \), or more formally, \[ a = \prod_{i=1}^k p_i^{\alpha_i}\text{,} \] \[ \phi(a) = a \prod_{i=1}^k \left(1 - \dfrac{1}{p_i}\right) = a \left(1 - \dfrac{1}{p_1}\right)\left(1 - \dfrac{1}{p_2}\right) \cdots \left(1 - \dfrac{1}{p_k}\right) \]</td>
+                            <td>The value of \( \phi(221) \) above can be also calculated in this way; 192 should be obtained</td>
+                            <td>This is a general way to calculate the value of Euler's totient function</td>
+                        </tr>
+                        <tr>
+                            <td>If \( (n-1)! \equiv -1 \pmod n \) holds, then \( n \) is a prime; <span style="font-weight: bold;">vice versa</span></td>
+                            <td>\( 4! = 24 \equiv 4 \pmod 5 \)</td>
+                            <td>This is the Wilson's Theorem. Although it guarantees a converse, it is impractical when \( n \) is large</td>
+                        </tr>
+                        <tr>
+                            <td>If \( \mathrm{gcd}(a, n) = 1 \), the congruence \[ ax + b \equiv 0 \pmod n \] has a solution \[ x \equiv -a^{\phi(n)-1}b pmod n \]</td>
+                            <td>Omitted</td>
+                            <td>This is a direct consequence of Euler's theorem</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="colls-header">
+                <div class="colls-content">
+                    <div class="colls-inner">
+                        <h3 id="algebra">Algebra</h3>
+                        <p>Under construction&hellip;</p>
+                    </div>
+                </div>
+                <div class="colls-content">
+                    <div class="colls-inner">
+                        <h3 id="logic">Logic &amp; set theory</h3>
+                        <p>Under construction&hellip;</p>
+                    </div>
+                </div>
+                <div class="colls-content">
+                    <div class="colls-inner">
+                        <h3 id="calculus">Analysis &amp; calculus</h3>
+                        <h4>Calculus</h4>
+                        <p>(Note: in the following, \( a, b, c, n \) denote real, constant numbers and \( x, y \) are variables, unless otherwise specified)</p>
+                        <ul>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} a = 0 \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} x^n = nx^{n-1} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \log_a x = \dfrac{1}{x \ln a} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \ln x = \dfrac{1}{x} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} a^x = a^x \cdot \ln a \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} e^x = e^x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \sin x = \cos x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \cos x = -\sin x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \tan x = \sec^2 x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \cot x = -\csc^2 x\]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \sec x = \sec x \tan x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \csc x = -\csc x \cot x \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \arcsin x = \dfrac{1}{\sqrt{1-x^2}} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \arccos x = -\dfrac{1}{\sqrt{1-x^2}} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \arctan x = \dfrac{1}{1+x^2} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccot} x = -\dfrac{1}{1+x^2} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcsec} x = \dfrac{1}{x\sqrt{x^2-1}} \]</li>
+                            <li>\[ \dfrac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccsc} x = \dfrac{1}{x\sqrt{x^2-1}} \]</li>
+                            <li>\[ \int \dfrac{1}{a + bx} \mathrm{d}x = \dfrac1b \ln \lvert a + bx \rvert + c \]</li>
+                            <li>\[ \int (a + bx)^n \mathrm{d}x = \dfrac{(a + bx)^{n+1}}{b(n+1)} + c \quad (n \ne -1) \]</li>
+                            <li>\[ \int \dfrac{x}{(a + bx)^2} \mathrm{d}x = \dfrac{1}{b^2} \left(\dfrac{a}{a+bx} + \ln \lvert a + bx \rvert \right) + c \]</li>
+                            <li>\[ \int \dfrac{x^2}{(a + bx)^2} \mathrm{d}x = \dfrac{1}{b^3} \left( a + bx - \dfrac{a^2}{a + bx} - 2a \ln \lvert a + bx \rvert \right) + c \]</li>
+                            <li>\[ \int \dfrac{1}{x(a + bx)} \mathrm{d}x = -\dfrac1a \ln \left\lvert \dfrac{a+bx}{x} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{(x+a)(x+b)} \mathrm{d}x = \dfrac{1}{b-a} \ln \left\lvert \dfrac{x+a}{x+b} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{x^2(a+bx)^2} \mathrm{d}x = -\dfrac{1}{ax} + \dfrac{b}{a^2} \ln \left\lvert \dfrac{a+bx}{x} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{x(a+bx)^2} \mathrm{d}x = \dfrac{1}{a(a+bx)} - \dfrac{1}{a^2} \ln \left\lvert \dfrac{a+bx}{x} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{x^2(a+bx)^2} \mathrm{d}x = -\dfrac{1}{a^3} \left( \dfrac{a+bx}{x} - 2b \ln \left\lvert \dfrac{a + bx}{x} \right\rvert - \dfrac{b^2x}{a+bx} \right) + c \]</li>
+                            <li>\[ \int \dfrac{1}{a + bx^2} \mathrm{d}x = \dfrac{1}{\sqrt{ab}} \arctan \dfrac{x\sqrt{ab}}{a} + c \qquad \text{ for $a, b$ with same signs} \]</li>
+                            <li>\[ \int \dfrac{1}{a + bx^2} \mathrm{d}x = \dfrac{1}{2\sqrt{-ab}} \ln \left\lvert \dfrac{a+\sqrt{-abx}}{a-\sqrt{-abx}} \right\rvert + c \qquad \text{ for $a, b$ with different signs} \]</li>
+                            <li>\[ \int \dfrac{x}{a + bx^2} \mathrm{d}x = \dfrac{1}{2b} \ln \lvert a + bx^2 \rvert + c \]</li>
+                            <li>\[ \int \dfrac{x}{a^2 \pm b^2x^2} \mathrm{d}x = \dfrac{1}{\pm 2b^2} \ln \lvert a^2 \pm b^2x^2 \rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{a^2 + b^2x^2} \mathrm{d}x = \dfrac{1}{ab} \arctan \dfrac{bx}{a} + c \]</li>
+                            <li>\[ \int \dfrac{1}{a^2 - b^2x^2} \mathrm{d}x = \dfrac{1}{2ab} \ln \left\lvert \dfrac{a+bx}{a-bx} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{x(a^2 \pm b^2x^2)} \mathrm{d}x = \dfrac{1}{2a^2} \ln \left\lvert \dfrac{x^2}{a^2 \pm b^2x^2} \right\rvert + c \]</li>
+                            <li>\[ \int \dfrac{1}{x^2(a^2 + b^2x^2)} \mathrm{d}x = -\dfrac{1}{a^2x} - \dfrac{b}{a^3} \arctan \dfrac{b}{a}x + c \]</li>
+                            <li>\[ \int \dfrac{1}{(a^2+b^2x^2)^2} \mathrm{d}x = \dfrac{x}{2a^2(a^2+b^2x^2)} + \dfrac{2a^3b} \arctan \dfrac{bx}{a} + c \]</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="colls-content">
+                    <div class="colls-inner">
+                        <h3 id="other-disc">Other disciplines</h3>
+                        <p>Under construction&hellip;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="foot">
+            <ul class="foot-panel">
+                <li>Jason Cai</li>
+                <li>&copy; 2026</li>
+            </ul>
+            <ul class="foot-links">
+                <div class="foot-links-side">
+                    <p id="tr_dogma">The Mathematical Dogma</p>
+                    <ul>
+                        <li><a id="tr_those_symbols" href="#symbols">Those \( \LaTeX \) symbols</a></li>
+                        <li><a id="tr_those_properties" href="#number-theory">Those properties of numbers</a></li>
+                        <li><a id="tr_those_algebra" href="#algebra">Those algebraic studies</a></li>
+                        <li><a id="tr_those_building" href="#logic">Those building blocks</a></li>
+                        <li><a id="tr_those_continue" href="#calculus">Those continuous-ness</a></li>
+                    </ul>
+                </div>
+                <div class="foot-links-side">
+                    <p id="tr_foot_articles">The Articles</p>
+                    <ul>
+                        <li><a href="articles.html#article-2">September 2026</a></li>
+                        <li><a href="articles.html#article-1">August 2026</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
